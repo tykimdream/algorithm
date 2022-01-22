@@ -63,20 +63,47 @@
 
 
 ############ 11650 좌표 정렬하기 ############
+# n = int(input())
+
+# corrd = []
+
+# for i in range(n):
+#     [a, b] = map(int, input().split())
+#     corrd.append([a, b])
+
+# ans = sorted(corrd)
+# for i in range(n):
+#     print(ans[i][0], ans[i][1])
+
+############ 11651 좌표 정렬하기2 ############
+# n = int(input())
+
+# corrd = []
+
+# for i in range(n):
+#     [b, a] = map(int, input().split())
+#     corrd.append([a, b])
+
+# ans = sorted(corrd)
+
+# for i in range(n):
+#     print(ans[i][1], ans[i][0])
+
+############# 10814 나이순 정렬 ############
 n = int(input())
 
-corrd = []
+person = []
 
 for i in range(n):
-    [a, b] = map(int, input().split())
-    corrd.append([a, b])
+    [old, name] = (input().split())
+    person.append([old, name])
 
-ans = sorted(corrd)
+ans = sorted(person)
+
 for i in range(n):
     print(ans[i][0], ans[i][1])
 
-############ 11651 좌표 정렬하기2 ############
-############# 10814 나이순 정렬 ############
+
 ############# 10825 국영수 ############
 ############# 10989 수 정렬하기3 ############
 ############# 11652 카드 ############
