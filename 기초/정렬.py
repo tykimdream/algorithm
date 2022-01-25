@@ -90,21 +90,58 @@
 #     print(ans[i][1], ans[i][0])
 
 ############# 10814 나이순 정렬 ############
-n = int(input())
+# n = int(input())
 
-person = []
+# person = []
 
-for i in range(n):
-    [old, name] = (input().split())
-    person.append([old, name])
+# for i in range(n):
+#     age, name = map(str, input().split())
+#     age = int(age)
+#     person.append((age, name))
 
-ans = sorted(person)
+# person.sort(key=lambda x: x[0])
 
-for i in range(n):
-    print(ans[i][0], ans[i][1])
+# for i in person:
+#     print(i[0], i[1])
 
 
 ############# 10825 국영수 ############
+# 틀림, 정렬 순서가 다름
+# n = int(input())
+# list = []
+
+# for _ in range(n):
+#     name, kor, eng, math = map(str, input().split())
+#     kor, eng, math = int(kor), int(eng), int(math)
+#     list.append((name, kor, eng, math))
+
+# list.sort(key=lambda x: (x[1], x[2], x[3], x[0]))
+
+# for i in list:
+#     print(i[0])
+
+n = int(input())
+list = []
+
+for _ in range(n):
+    name, kor, eng, math = map(str, input().split())
+    kor, eng, math = int(kor), int(eng), int(math)
+    list.append((name, kor, eng, math))
+
+list.sort(key=lambda x: (-x[1], x[2], -x[3], x[0]))
+
+for i in list:
+    print(i[0])
+
+
 ############# 10989 수 정렬하기3 ############
+# def quick(arr):
+#     left = arr[0]
+#     right = arr[len(arr)-1]
+
+#     if(left >= right):
+#         return
+
+
 ############# 11652 카드 ############
 ############# 11004 K번째 수 ############
