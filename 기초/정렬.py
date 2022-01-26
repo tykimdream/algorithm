@@ -120,28 +120,99 @@
 # for i in list:
 #     print(i[0])
 
-n = int(input())
-list = []
+# n = int(input())
+# list = []
 
-for _ in range(n):
-    name, kor, eng, math = map(str, input().split())
-    kor, eng, math = int(kor), int(eng), int(math)
-    list.append((name, kor, eng, math))
+# for _ in range(n):
+#     name, kor, eng, math = map(str, input().split())
+#     kor, eng, math = int(kor), int(eng), int(math)
+#     list.append((name, kor, eng, math))
 
-list.sort(key=lambda x: (-x[1], x[2], -x[3], x[0]))
+# list.sort(key=lambda x: (-x[1], x[2], -x[3], x[0]))
 
-for i in list:
-    print(i[0])
+# for i in list:
+#     print(i[0])
 
 
 ############# 10989 수 정렬하기3 ############
-# def quick(arr):
-#     left = arr[0]
-#     right = arr[len(arr)-1]
+# 메모리 초과
+# import sys
+# input = sys.stdin.readline
 
-#     if(left >= right):
-#         return
+# n = int(input())
+# list = []
+# for _ in range(n):
+#     list.append(int(input()))
+# list.sort()
+
+# for i in list:
+#     print(i)
+
+# sol 2. 배열로 몇번 등장했는지 확인해서 출력하자
+# import sys
+# input = sys.stdin.readline
+# MAX = 10001       10000으로하니까 런타임에러 (2번 발생)
+# n = int(input())
+# dic = [0] * MAX
+
+# for _ in range(n):
+#     num = int(input())
+#     dic[num] = dic[num] + 1
+
+# for i in range(MAX):
+#     if dic[i] != 0:
+#         for j in range(dic[i]):
+#             print(i)
 
 
 ############# 11652 카드 ############
+# sol 1. 음수 처리 불가능
+# import sys
+# input = sys.stdin.readline
+
+# n = int(input())
+# dic = [0] * 1000000
+
+# for _ in range(n):
+#     num = int(input())
+#     dic[num] = dic[num] + 1
+
+# big = dic[0]
+# ans = 0
+
+# for i in range(len(dic)):
+#     if(big < dic[i]):
+#         big = dic[i]
+#         ans = i
+
+# print(ans)
+
+# sol 2 딕셔너리 사용
+# import sys
+# input = sys.stdin.readline
+
+# n = int(input())
+# dic = {}
+
+# for _ in range(n):
+#     card = int(input())
+#     if card not in dic:
+#         dic[card] = 1
+#     else:
+#         dic[card] += 1
+
+# # print(dic)
+# dic = sorted(dic.items(), key=lambda x: (-x[1], x[0]))
+# # print('dic : ', dic)
+
+# print(dic[0][0])
+
 ############# 11004 K번째 수 ############
+import sys
+input = sys.stdin.readline
+
+n, st = map(int, input().split())
+list = list(map(int, input().split()))
+
+list.sort()
+print(list[st-1])
