@@ -1,4 +1,20 @@
-a = int(input())
+# 4358
 
-for i in range(2, a):
-    print(i)
+from collections import defaultdict
+import sys
+
+trees = defaultdict(int)
+n = 0
+
+for line in sys.stdin:
+    if line == '\n':
+        break
+    tree = line.rstrip()
+    trees[tree] += 1
+    n += 1
+
+tree_lst = list(trees.keys())
+tree_lst.sort()
+
+for tree in tree_lst:
+    print('%s %.4f' % (tree, trees[tree]/n*100))

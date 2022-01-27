@@ -1,3 +1,5 @@
+# 22.01.26
+
 # # 9012
 # 괄호 문자열(Parenthesis String, PS)은 두 개의 괄호 기호인 ‘(’ 와 ‘)’ 만으로 구성되어 있는 문자열이다.
 # 그 중에서 괄호의 모양이 바르게 구성된 문자열을 올바른 괄호 문자열(Valid PS, VPS)이라고 부른다.
@@ -7,23 +9,47 @@
 
 # 여러분은 입력으로 주어진 괄호 문자열이 VPS 인지 아닌지를 판단해서 그 결과를 YES 와 NO 로 나타내어야 한다.
 
+# sol 1. repl(Read Eval Print Loop) 방식
+# import sys
+# input = sys.stdin.readline
+
+# n = int(input())
+
+# for _ in range(n):
+#     string = input()
+#     sum = 0
+#     for i in range(len(string)):
+#         if string[i] == '(':
+#             sum += 1
+#         if string[i] == ')':
+#             sum -= 1
+#         if(sum < 0):
+#             print("NO")
+#             break
+#     if(sum == 0):
+#         print("YES")
+#     if(sum > 0):
+#         print("NO")
+
+# sol 2. 스택으로
 import sys
 input = sys.stdin.readline
 
 n = int(input())
-
 for _ in range(n):
+    stack = []
     string = input()
-    sum = 0
     for i in range(len(string)):
         if string[i] == '(':
-            sum += 1
+            stack.append('(')
         if string[i] == ')':
-            sum -= 1
-        if(sum < 0):
+            if not stack:
+                print('NO')
+                break
+            else:
+                stack.pop()
+    else:
+        if not stack:
+            print("YES")
+        else:
             print("NO")
-            break
-    if(sum == 0):
-        print("YES")
-    if(sum > 0):
-        print("NO")
