@@ -18,3 +18,6 @@ tree_lst.sort()
 
 for tree in tree_lst:
     print('%s %.4f' % (tree, trees[tree]/n*100))
+
+
+# test
