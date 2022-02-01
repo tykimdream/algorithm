@@ -18,7 +18,7 @@ arr = [i for i in range(1, n+1)]
 
 ans = []
 exe = 0
-
+print("초기 배열의 상태 : ", arr)
 for t in range(n):
     exe += k-1
     if (exe >= len(arr)):
@@ -26,7 +26,7 @@ for t in range(n):
 
     ans.append(str(arr.pop(exe)))
     # 출력되나 확인
-    # print(t+1, "회차 : ", "arr : ", arr, "ans : ", ans)
+    print(t+1, "회차 : ", "arr : ", arr, "ans : ", ans)
 
 print("<", ", ".join(ans)[:], ">", sep='')
 

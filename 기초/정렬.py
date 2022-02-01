@@ -151,7 +151,7 @@
 # sol 2. 배열로 몇번 등장했는지 확인해서 출력하자
 # import sys
 # input = sys.stdin.readline
-# MAX = 10001       10000으로하니까 런타임에러 (2번 발생)
+# MAX = 10001       # 10000으로하니까 런타임에러 (2번 발생)
 # n = int(input())
 # dic = [0] * MAX
 
@@ -208,11 +208,11 @@
 # print(dic[0][0])
 
 ############# 11004 K번째 수 ############
-import sys
-input = sys.stdin.readline
+# import sys
+# input = sys.stdin.readline
 
-n, st = map(int, input().split())
-list = list(map(int, input().split()))
+# n, st = map(int, input().split())
+# list = list(map(int, input().split()))
 
-list.sort()
-print(list[st-1])
+# list.sort()
+# print(list[st-1])
