@@ -13,6 +13,7 @@ input = sys.stdin.readline
 def dfs(graph, v, visited):
     visited[v] = True
     print(v, end=" ")
+    graph[v].sort()
     for i in graph[v]:
         if not visited[i]:
             dfs(graph, i, visited)
@@ -20,10 +21,13 @@ def dfs(graph, v, visited):
 
 def bfs(graph, start, visited):
     queue = deque([start])
+
     visited[start] = True
+
     while queue:
         v = queue.popleft()
         print(v, end=' ')
+        graph[v].sort()
         for i in graph[v]:
             if not visited[i]:
                 queue.append(i)
@@ -41,9 +45,14 @@ for _ in range(m):
     graph[a].append(b)
     graph[b].append(a)
 
+# graph.sort()
 # print(graph)
-dfs(graph, 1, visited)
+dfs(graph, v, visited)
 print()
-# BFS 구현하자
 visited = [False] * (n+1)
-bfs(graph, 1, visited)
+bfs(graph, v, visited)
+
+# feedback
+# 정렬을 한번 해야 정답이 나왔는데 어떻게 할까 하고 sort부터해보니 안되서
+# 함수 안에 삽입했는데 우려와 달리 맞게 돌아갔다
+# 시간 복잡도가 많이 올라갈거라고 생각하고 다른 방법이 있나 알아봐야겠다.
