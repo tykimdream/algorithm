@@ -3,3 +3,10 @@
 # 그러한 그래프를 특별히 이분 그래프 (Bipartite Graph) 라 부른다.
 
 # 그래프가 입력으로 주어졌을 때, 이 그래프가 이분 그래프인지 아닌지 판별하는 프로그램을 작성하시오.
+
+import sys
+input = sys.stdin.readline
+
+k = int(input())
+
+graph = [[], ]

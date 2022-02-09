@@ -25,14 +25,14 @@ for _ in range(m):
     graph[a].append(b)
     graph[b].append(a)
 
-cycle = 0
+amount = 0
 
 for i in range(1, n+1):
     if not visited[i]:
-        cycle += 1
+        amount += 1
         dfs(graph, i, visited)
 
-print(cycle)
+print(amount)
 
 # 런타임 에러 발생
 # import sys한다음 limit를 걸어주니 해결

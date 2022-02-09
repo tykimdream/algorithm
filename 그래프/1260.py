@@ -13,7 +13,7 @@ input = sys.stdin.readline
 def dfs(graph, v, visited):
     visited[v] = True
     print(v, end=" ")
-    graph[v].sort()
+    # graph[v].sort()
     for i in graph[v]:
         if not visited[i]:
             dfs(graph, i, visited)
@@ -27,7 +27,7 @@ def bfs(graph, start, visited):
     while queue:
         v = queue.popleft()
         print(v, end=' ')
-        graph[v].sort()
+        # graph[v].sort()
         for i in graph[v]:
             if not visited[i]:
                 queue.append(i)
@@ -45,7 +45,9 @@ for _ in range(m):
     graph[a].append(b)
     graph[b].append(a)
 
-# graph.sort()
+for i in range(1, n+1):
+    graph[i].sort()
+
 # print(graph)
 dfs(graph, v, visited)
 print()
@@ -56,3 +58,5 @@ bfs(graph, v, visited)
 # 정렬을 한번 해야 정답이 나왔는데 어떻게 할까 하고 sort부터해보니 안되서
 # 함수 안에 삽입했는데 우려와 달리 맞게 돌아갔다
 # 시간 복잡도가 많이 올라갈거라고 생각하고 다른 방법이 있나 알아봐야겠다.
+
+# graph를 입력받고 각 노드별로 sort해주고 시작하였다. 해결 완료
