@@ -76,4 +76,6 @@ for i in range(n):
             result += 1
             count = 0
 
-print(len(dong), dong)
+print(len(dong))
+for i in range(len(dong)):
+    print(dong[i])
