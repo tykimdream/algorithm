@@ -1,5 +1,4 @@
 from collections import deque
-from turtle import st
 
 
 def dfs(graph, visited, v):
@@ -81,4 +80,22 @@ graph = [
 visited = [False] * 9
 
 print("\nbfs 결과 : ", end=' ')
+bfs(graph, visited, 1)
+
+
+def bfs(graph, visited, start):
+    q = deque([start])
+    visited[start] = True
+    while q:
+        v = q.popleft()
+        print(v, end=' ')
+        for i in graph[v]:
+            if not visited[i]:
+                q.append(i)
+                visited[i] = True
+
+
+visited = [False] * 9
+
+print("\nbfs2 결과 : ", end=' ')
 bfs(graph, visited, 1)

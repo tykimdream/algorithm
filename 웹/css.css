@@ -1,0 +1,21 @@
+/* @media screen and (min-width: 400px), screen and (orientation: landscape){
+    body{
+        color: blue
+    }
+} */
+
+@media screen and (max-width:900px){
+    body{
+        color:blue
+    }
+    h1 {
+        content: 'this is small screen';
+    }
+
+}
+
+@media screen and (min-width : 900px){
+    body{
+        color : red
+    }
+}
