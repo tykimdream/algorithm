@@ -4,18 +4,22 @@
     }
 } */
 
-@media screen and (max-width:900px){
+/* @media screen and (max-width:900px){
     body{
         color:blue
     }
-    h1 {
-        content: 'this is small screen';
-    }
 
-}
+} */
 
 @media screen and (min-width : 900px){
     body{
         color : red
+    }
+}
+
+@media screen and (max-width : 900px){
+    body{
+        color: green;
+        background-color: magenta;
     }
 }
