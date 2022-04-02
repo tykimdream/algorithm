@@ -9,7 +9,7 @@ input = sys.stdin.readline
 
 # DFS, BFS 메소드 각각 구현
 
-
+# 깊이 우선 탐색 depth first search DFS
 def dfs(graph, v, visited):
     visited[v] = True
     print(v, end=" ")

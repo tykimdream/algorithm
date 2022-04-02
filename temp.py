@@ -20,6 +20,10 @@
 #     print('%s %.4f' % (tree, trees[tree]/n*100))
 
 
-a = input()
+# a = input()
 
-print(ord(a))
+# print(ord(a))
+
+# a[10] = {1, 2, 3, 4}
+
+# print(a)
