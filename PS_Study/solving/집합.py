@@ -14,11 +14,16 @@ for _ in range(t):
         bit = 0
     else:
         oper = command[0]
-        num = command[1]
+        num = int(command[1]) - 1
 
         if oper == 'add':
             bit |= (1 << num)
         elif oper == 'remove':
             bit &= ~(1 << num)
         elif oper == 'check':
-            dd
+            if bit & (1 << num) == 0:
+                print(0)
+            else:
+                print(1)
+        elif oper == 'toggle':
+            bit = bit ^ (1 << num)
