@@ -6,8 +6,4 @@ for i in coin:
     count += Money // i
     Money %= i
 
-print(count, "개 반환")
-
-
-
-
+print(count, "")
