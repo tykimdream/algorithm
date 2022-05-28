@@ -9,8 +9,8 @@ for tc in range(1, T+1):
         weight.append(w)
         value.append(v)
 
-    dp = [[0 for x in range(k+1)] for x in range(n+1)]
-
+    dp = [[0 for x in range(k+1)] for y in range(n+1)]
+    # 물건의 수를 무게(1~k)만큼 반복
     for i in range(n+1):
         for j in range(k+1):
             if i == 0 or j == 0:
