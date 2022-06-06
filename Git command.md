@@ -8,4 +8,4 @@ git commit -m "index"
 git push <branch> main
 
 ###### 날짜 변경
-git commit --amend --no-edit --date "Sun 6 Feb 2022 14:03:06 KST"
+git commit --amend --no-edit --date "Thu 2 Jun 2022 10:03:08 KST"
