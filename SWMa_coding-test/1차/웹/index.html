@@ -1,0 +1,51 @@
+
+<html>
+    <head>
+        <title>Test</title>
+        <link rel ="stylesheet" href = "css.css">
+        <script type = "text/javascript" src = "./test.js"></script>
+    </head>
+    <body>
+        <input type='text'/>
+        <button>입력</button>
+        <input type="button" value="배경색 변경" onclick="changeColor()"/>
+        <h1 id = "head">
+            Hello 
+        </h1>
+        <script>
+            const $button = document.querySelector('button')
+            const input_v = document.querySelector('input')
+            const output_v = document.querySelector('#head')
+            
+            let word;
+            let newword;
+            const inputWord = () => {
+                
+                word = newword
+                output_v.textContent =  output_v.textContent + word + ' '
+                
+                
+            }
+            const onInput = (event) =>{
+                newword = event.target.value
+            }
+
+            $button.addEventListener('click', inputWord)
+            input_v.addEventListener('input', onInput)
+
+            var index = 0;
+            var colors = [ "red", "orange", "yellow", "green", "blue", "Indigo", "purple"];
+            var max = colors.length;
+
+            function changeColor(){
+                if(index != max){
+                    document.body.style.backgroundColor = colors[index];
+                    index++;
+                }
+                else{
+                    index = 0
+                }
+            }
+        </script>
+    </body>
+</html>
